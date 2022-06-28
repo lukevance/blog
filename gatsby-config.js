@@ -7,11 +7,11 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
-    siteTitle: `Luke Blog`,
-    siteTitleAlt: `Luke Blog - Minimal Blog - Gatsby Theme`,
+    siteTitle: `Provolove`,
+    siteTitleAlt: `Luke Blog - Thoughts on building meaningful software`,
     siteHeadline: `Luke Blog - based on a Gatsby Theme from @lekoarts`,
     siteUrl: `https://www.provolove.com`,
-    siteDescription: `Just my thoughts on tech 43rfgt`,
+    siteDescription: `Just my thoughts on tech`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,

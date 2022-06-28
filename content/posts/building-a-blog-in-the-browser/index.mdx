@@ -1,24 +1,78 @@
 ---
-title: Building a Blog in the Browser
+title: Build this Blog on Your Smartphone
 date: 2022-06-16
 tags:
   - Developer Tools
   - Tech
 ---
 
-So I just built this website without ever leaving my browser. 
+Ok, I didn’t actually build this site on my smartphone. I have an iPhone mini, which I love, but typing all of this on that screen would be infuriating. But I could have! I built it entirely from a web browser on a chromebook. But follow this guide and you absolutely can build this website or probably a better one from your phone. And may I add, no coding experience is required!
 
-"Cool, Luke, have you ever heard of Wordpress? Or Squarespace, or Webflow or any other website builder out there?"
+"Cool, Luke, have you ever heard of Wordpress? Or Wix, or Webflow or any other website builder out there?"
 
-Fair enough. Yes, I have. But I wanted to build a website with proper developer tooling and lifecycle management. One that _could_ become a more capable web app someday if it needed to be. I wanted to know if I _could_ build a "serious" web app without leaving the browser. I know a horde of peple with much more successful websites than I'll ever have are currently sharpening there pitchforks, whatever come and get me.
+Fair enough. Yes, I have. But while those systems are awesome and have many benefits, I  wanted to build a website that wouldn’t be locked into a specific platform or provider and one I could manage with proper developer tooling. One that *could* become a more capable web app someday if I wanted it to be. **I wanted to see how hard it would be to build and deploy a website from source code to the cloud without leaving the browser**. 
 
-My criteria were:
+I still hear the sharpening of pitchforks by the hordes of people who have built massively popular and capable apps with drag and drop frameworks. They are likely much more successful than I'll ever be and honestly I’m super happy for them. That’s not the point, I’ll write something soon on the pros and cons of no-code vs all-code and what’s in between.
 
-1. Own and manage the code - the source code is in my own github repo
-2. [React](www.reactjs.com)-based - be able to import and add React components to the site and maybe even my blog posts
+## Background
+
+I started this project because I wanted to update my personal site and add a blog page to it. Sounds simple enough, but when I tried to `npm install` on my outdated chromebook (I’ll write more about developing on a Chromebook later) I started to run into a cascading error-upgrade-error cycle. This problem is generally infuriating to me and although I understand why it’s a problem I strongly feel that there needs to be tools that solve it. For new developers and seasoned engineers alike but especially for those early on their journey. 
+
+I’ve used Gatsby as a static site generator before and had even used this nice little “deploy to Netlify” button before, so that was my initial thought. When I got to the Gatsby Templates page though, I learned that all their templates are now designed for deploying to the Gatsby Cloud. Awesome another cloud! Actually, I think this is really cool, however they don’t appear to have a free tier and I already have a Netlify account so I decided I’d save the Gatsby Cloud review for another day. I did wonder if deploying with Netlify would be more difficult now, but I figured I’d start there.
+
+So my new project criteria were:
+
+1. Own and manage the code - the source code needs to be in my own github repository
+2. Built on [React](www.reactjs.com) - React is the frontend development framework I prefer/know best
 3. Integrated data sources - import posts from Notion or let users comment or something else fun
 
+Sound fun? Read on.
 
-Well it went pretty well, here's the blog! I'll add more about the process asap
+## Prerequisites
 
-To be updated soon
+- Web browser & internet connection
+- Github account - free
+- Netlify account - free
+- **No coding experience** - but to add blogs to the site you’ll need either simple Markdown knowledge or a Markdown editor (I like this one) - [https://stackedit.io/](https://stackedit.io/)
+
+## Process
+
+### Step 1: Pick a template
+
+Technically, this would work just fine by creating a purely empty repository and writing all the files needed by hand. But why on earth would we do that when there are thousands or maybe millions of developers who’ve contributed open source examples and templates to start from?
+
+There are lots of places to find great templates these days. Most static site generators out there have a few of their own. Since I’ve used Gatsby before and at the time it played well with Netlify, I went that route and soon came across [this beauty](https://www.gatsbyjs.com/starters/LekoArts/gatsby-starter-minimal-blog).
+
+If we were doing this outside of a browser we could install the Gatsby CLI and use the template as a starter. But thankfully Github has pretty neat [templating functionality](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) built in, which LekoArts was nice enough to set up, so all we need to do 
+
+1. log in to Github 
+2. head over to the [source code](https://github.com/LekoArts/gatsby-starter-minimal-blog) 
+3. and click on the “Use this template” button.
+
+![Github use template screenshot](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/36a0095f-c7fe-447e-9c07-95fde4bc2c47/Screenshot_2022-06-27_8.50.09_PM.png)
+
+## Step 2: Deploy to Netlify
+
+Similarly to the last step, there are several free Static Site servers these days. Technically this can even be down from Github using the Github pages feature, but since we’re not going to be testing this site locally, Netlify will help us [preview changes](https://www.netlify.com/products/deploy-previews/) by deploying a temporary version of the site for any commit or change we want to test.
+
+1. Log in to Netlify
+2. Under the “Sites” section, click “Add new site” and select “Import an existing project”
+
+![Netlify add new site button screenshot](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea3abae5-d735-47f9-809e-b3dc6226991b/Screenshot_2022-06-20_2.46.35_PM.png)
+
+1. If you haven’t already, you’ll need to log in to Github so that Netlify can find the template we created in step 1. 
+2. After authorizing, Netlify will ask you to pick a repository, and after finding the template from step 1, and moving on to the final setup step you should see this nice little message:
+
+![informational Gatsby integration support message](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3b71ef4-58d3-4d76-8199-2adc172c2315/Screenshot_2022-06-27_9.03.24_PM.png)
+
+Look at that! How easy can this be?
+
+1. Last step, click that big beautiful deploy button and check out your fancy new website!
+
+## Step 3: Make changes
+
+At this point, our website should look almost exactly, if not exactly, like the demo site of the template we picked: **[Demo Website](https://minimal-blog.lekoarts.de/)**
+
+![Minimal Blog Screenshot](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d94f0c81-037a-482c-94ed-c75b67fc06f1/Screenshot_2022-06-27_9.12.49_PM.png)
+
+So let’s make this thing our own!
