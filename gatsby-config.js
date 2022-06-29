@@ -143,5 +143,11 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-segment-analytics",
+      options: {
+        writeKey: "0qRCnfGw63xbxBU6lELVAseh4gZK81PM",
+      },
+    },
   ].filter(Boolean),
 }
