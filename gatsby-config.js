@@ -149,5 +149,15 @@ module.exports = {
         writeKey: "0qRCnfGw63xbxBU6lELVAseh4gZK81PM",
       },
     },
+    {
+      resolve: `gatsby-plugin-goatcounter`,
+      options: {
+        code: 'https://provolone-snitch.goatcounter.com',
+        head: false,
+        pixel: false,
+        referrer: false,
+        exclude: []
+      }
+    }
   ].filter(Boolean),
 }
