@@ -152,7 +152,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
-        code: 'https://provolone-snitch.goatcounter.com',
+        code: 'provolone-snitch',
         head: false,
         pixel: false,
         referrer: false,
