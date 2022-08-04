@@ -30,6 +30,10 @@ module.exports = {
             title: `About`,
             slug: `/about`,
           },
+          {
+            title: `Work`,
+            slug: `/work`
+          }
         ],
         externalLinks: [
           {
@@ -152,7 +156,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
-        code: 'https://provolone-snitch.goatcounter.com',
+        code: 'provolone-snitch',
         head: false,
         pixel: false,
         referrer: false,
