@@ -8,13 +8,13 @@ module.exports = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
     siteTitle: `Provolove`,
-    siteTitleAlt: `Luke Blog - Thoughts on building meaningful software`,
-    siteHeadline: `Luke Blog - based on a Gatsby Theme from @lekoarts`,
+    siteTitleAlt: `Provolove - Thoughts on building meaningful software`,
+    siteHeadline: `Provolove blog - based on a Gatsby Theme from @lekoarts`,
     siteUrl: `https://www.provolove.com`,
-    siteDescription: `Just my thoughts on tech`,
+    siteDescription: `Just a little about me and my thoughts on tech`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@lukealanv`,
   },
   plugins: [
     {
@@ -162,6 +162,14 @@ module.exports = {
         referrer: false,
         exclude: []
       }
-    }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-emoji`,  
+        ]
+      }
+    },
   ].filter(Boolean),
 }
