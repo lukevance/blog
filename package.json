@@ -25,6 +25,7 @@
     "gatsby-plugin-sitemap": "^5.12.1",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27",
     "gatsby-plugin-segment-analytics": "^0.4.0",
+    "gatsby-transformer-remark": "^5.20.0",
     "gatsby-remark-emoji": "^0.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
