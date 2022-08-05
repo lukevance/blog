@@ -75,4 +75,23 @@ At this point, our website should look almost exactly, if not exactly, like the 
 
 ![Minimal Blog template screenshot](./assets/template-deployed-screenshot.png)
 
-So let’s make this thing our own!
+So let’s make this thing our own! This is where we we’ll write some content and edit a bit of the code. Don’t worry, we’re doing absolutely nothing complicated here so like I said before, **no coding experience is required.**
+
+Typically the way to edit a website like this would be to “clone” or download the source code repository onto your computer. But that doesn’t work on a smartphone (at least not on most mobile operating systems or not yet). So instead, we’re going to use a fun new Github feature.
+
+From your cloned Github repository (e.g. [github.com/lukevance/blog](http://github.com/lukevance/blog)) simply push the `.` key or if that doesn’t work, replace `.com` with `.dev` in the url (e.g. [github.**dev**/lukevance/blog](http://github.dev/lukevance/blog)) and hit enter. You should see the page reload to look something like this:
+
+![Github.dev screenshot](./assets/github-dot-dev.png)
+
+Woah! A whole lightweight version of [VS Code](https://code.visualstudio.com) right in the browser?! Pretty neat.
+
+From here we can completely rewrite the content, styles and code of this website. Not only that, we can actually add new packages to the website. Simply by adding them to the `package.json` file Netlify will pick up the new packages and install them when our site gets deployed. Sure, we’ll have to wait for it to be deployed to test the changes but that’s where Netlify’s [Deploy Previews](https://docs.netlify.com/site-deploys/deploy-previews/) and Branch Deploys become super handy. 
+
+### *Recommended: Create a dev branch*
+
+From the bottom of your page, click the branch name (should be `main` or `master`). This will bring up a small menu at the top of the page. Click “Create New Branch…” and type `dev`. This will help us preview changes and not crash the live website before submitting changes to the live or default branch (should be `main`).
+
+<p align="middle">
+  <img src="./assets/select-branch-button.png" width="100" />
+  <img src="./assets/create-branch-button.png" width="100" />
+</p>
