@@ -163,19 +163,19 @@ module.exports = {
         exclude: []
       }
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve:'gatsby-remark-emoji',
-            options: {
-              emojiConversion: 'shortnameToUnicode',
-              ascii: false,
-            } 
-          }  
-        ]
-      }
-    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve:'gatsby-remark-emoji',
+    //         options: {
+    //           emojiConversion: 'shortnameToUnicode',
+    //           ascii: false,
+    //         } 
+    //       }  
+    //     ]
+    //   }
+    // },
   ].filter(Boolean),
 }
