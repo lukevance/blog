@@ -33,8 +33,8 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lukealanv`,
+            name: `Github`,
+            url: `https://github.com/lukevance`,
           },
           {
             name: `LinkedIn`,
