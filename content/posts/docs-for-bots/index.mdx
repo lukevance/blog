@@ -8,27 +8,38 @@ tags:
 
 # Docs for Bots
 I like to say "the best documentation is no documentation." What I mean is: on the micro scale: shipping a new feature, adapting an API for a new use case, or adding a new endpoint to an API. The less new docs you create, the better. It means you designed the feature logically and aren't setting yourself up for maintenance headaches down the road. The second best docs are up to date docs, which are easier to have when you have less of them. 
+
 On the macro side, documentation is critical. Implementing an integration with a service that is under-documented, or worse inaccurately documented, is brutal. Worse yet is picking up work on a codebase where the getting started guide is tribal knowledge. I’ve always thought was a prime use case for AI! No one enjoys going back to write docs or update docs for their project, especially not for internal users. The promise of AI seems perfectly aligned with the ability to understand a codebase, any comments included, the context of the specific languages or frameworks used and then continually churn out up-to-date documentation.
+
 As AI has gotten better over the last couple years I’ve believed in documentation as a likely first use case for commercialization. It seems like such low hanging fruit. Even beyond docs, I'm incredibly optimistic about vibecoding tools for prototyping, developing MVPs, and generally lowering the learning curve for more people to contribute to software development efforts. But recently I’ve started thinking, maybe what unlocks the ability for AI to do more is keeping human oversight in the process of creating thoughtful, well-designed docs to keep things on the rails.
+
 What turned on this lightbulb for me recently? Well, I’m glad you asked.
 
 ## 🧱 The Brownfield Reality
 I spent 15+ hours debugging a local dev environment that AI-generated docs said would take 3 steps. Clone, build, deploy.
+
 The reality: 10 actual steps with 6 troubleshooting branches. Port conflicts with macOS AirPlay. ARM compatibility issues. Migrations silently failing inside transactions. Two PostgreSQL instances fighting for the same port.
+
 When I asked an AI assistant to walk me through setup using those same docs, it got even more confidently optimistic. At no point did it suggest the docs might be wrong or out of date. And here's the kicker—those docs were exhaustive on happy-path stuff. Detailed instructions for installing kubectl on Mac, Linux, and Windows. Thorough coverage of what should happen.
 The exhaustiveness actually worked against me. The AI saw comprehensive docs and assumed they were complete.
 
 ## 🤖 The Confidence Problem
 AI is excellent at documenting the happy path. Infrastructure is mostly unhappy paths.
+
 The docs I was working from were never going to work out of the box. They were optimistic without real-world testing. And when an AI consumed those docs, it inherited that optimism—amplified it, even—without the human intuition to say "wait, this seems too easy."
+
 Human engineers who'd fought through these issues left breadcrumbs in Slack. That tribal knowledge was what actually unblocked me. AI helped me find and synthesize it, then helped write a realistic quickstart once we'd figured out what the real steps were.
 
 ## 🔄 Efficiency or Elimination?
 This experience got me thinking about a broader question: Is AI making us more efficient at the hard parts of building software, or is it letting us skip them entirely?
+
 Documentation is one of those areas where humans typically need a lot of help. It's tedious, it falls out of date, and most of us would rather be building than writing. AI can absolutely help here—synthesizing, updating, keeping pace with change.
+
 But there's a risk. If AI handles the documentation, do we lose the forcing function that makes us think about our work? Writing docs isn't just about explaining—it's about reconsidering whether something makes sense, whether it can be communicated clearly, whether someone else could actually follow along.
+
 Will AI become a crutch that lets us skip the important work of rethinking our systems and attempting to communicate concepts in a way that makes sense to others?
 
 ## 🤔 The Path Forward
 I don't have a clean answer. But I suspect the teams that thrive will be the ones who use AI to handle the maintenance of documentation—keeping things current, filling gaps—while still doing the hard human work of designing systems that need less documentation in the first place.
+
 If bots are going to be reading and acting on our docs as much as humans are, we need to think carefully about what we're feeding them. And maybe more importantly, we need to keep doing the thinking ourselves.
